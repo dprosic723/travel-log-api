@@ -18,7 +18,7 @@ return new class extends Migration
             $table->dateTime('departure_date');
             $table->string('arrival_place')->nullable();
             $table->string('departure_place')->nullable();
-            $table->string('accomodation_place')->nullable();
+            $table->string('accommodation_place')->nullable();
             $table->text('comment')->nullable();
             $table->timestamps();
         });
