@@ -9,3 +9,5 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::post('/travel-logs', [TravelLogController::class, 'store']);
+Route::get('/travel-logs/{travelLog}', [TravelLogController::class, 'show']);
+Route::delete('/travel-logs/{travelLog}', [TravelLogController::class, 'destroy']);
