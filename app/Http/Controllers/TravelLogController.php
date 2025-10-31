@@ -34,12 +34,17 @@ class TravelLogController extends Controller
         return TravelLogData::from($travelLog);
     }
 
+    public function destroy(TravelLog $travelLog){
+        $travelLog->delete();
+        return response()->noContent();
+    }
+
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(TravelLog $travelLog): TravelLogData
     {
-        //
+        return TravelLogData::from($travelLog);
     }
 
     /**
@@ -53,8 +58,4 @@ class TravelLogController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
-    {
-        //
-    }
 }
